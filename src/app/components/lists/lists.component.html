@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center">Shopping List</h3>
+        </div>
+    </div>
+    <hr/>
+    <div class="row list" *ngFor="let ITEM of lists">   <!-- variables must have the same name as the backend -->
+        <div class="col-4">{{ITEM.creationDate}}</div>
+        <div class="col-8">{{ITEM.shopName}} -  R$ {{ITEM.totalPrice}}</div>
+    </div>
+</div>
+
+
+<!-- Modal to Include new Lists-->
+<!-- Imported from Bootstrap -->
+<!-- Button trigger modal -->
+<button type="button" id="btn-newList" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <!-- Imported from Bootstrap  -->
+  <i class="fa-solid fa-plus fa-2x"></i>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new List</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Imported from Bootstrap -->
+           <!-- Date of the buy -->
+          <div class="mb-3">
+            <label for="txtDate" class="form-label">Shopping Date</label>
+            <input type="date" class="form-control" id="txtDate" [(ngModel)]=newList.creationDate>
+          </div>
+          <!-- Supermarket Name -->
+          <div class="mb-3">
+            <label for="txtLocal" class="form-label">Supermarket Name</label>
+            <input type="text" class="form-control" id="txtLocal" [(ngModel)]=newList.shopName>
+          </div>
+          <!-- Total Itens Price -->
+          <div class="mb-3">
+            <label for="txtTotalValue" class="form-label">Budget</label>
+            <input type="number" class="form-control" id="txtTotalValue" [(ngModel)]=newList.totalPrice>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-canel" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-save"  data-bs-dismiss="modal" (click)="addNewList()">Finish</button>
+        </div>
+      </div>
+    </div>
+  </div>

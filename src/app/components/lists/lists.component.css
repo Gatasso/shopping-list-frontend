@@ -1,0 +1,19 @@
+#btn-newList{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: darkgreen;
+    background-color: rgb(107, 201, 89);
+    color:white;
+}
+
+.list{
+    background-color: rgb(243, 243, 243);
+    border-bottom:  1px solid gray;
+}
