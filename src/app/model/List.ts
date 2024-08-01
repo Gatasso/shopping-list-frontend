@@ -1,15 +1,7 @@
 export class List{
-    public id: number; 
-    public creationDate: Date;
-    public shopName: string;    
-    public totalPrice: number;
-    public status: number;
-
-    public constructor(){
-        this.id = 0;
-        this.creationDate = new Date(); 
-        this.shopName = ""; 
-        this.totalPrice = 0; 
-        this.status = 0;
-    }
+    public id: number = 0; 
+    public creationDate: Date = new Date();
+    public shopName: string = "";    
+    public totalPrice: number = 0;
+    public status: number = 0;
 }
