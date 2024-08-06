@@ -1,0 +1,29 @@
+.content{
+    background-color: rgb(243, 243, 243);
+    border-bottom:  1px solid gray;
+}
+a, a:active, a:link, a:hover, a:visited{
+    text-decoration: none;
+    color:black;
+}
+header{
+    border-bottom: 2px solid black;
+}
+
+#finalBar{
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marked{
+    text-decoration: line-through;
+    text-decoration-thickness: 4px;
+}
+.unmarked{
+    text-decoration: none;
+}
