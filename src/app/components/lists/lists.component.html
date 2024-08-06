@@ -6,8 +6,9 @@
     </div>
     <hr/>
     <div class="row list" *ngFor="let ITEM of lists">   <!-- variables must have the same name as the backend -->
-        <div class="col-4">{{ITEM.creationDate}}</div>
-        <div class="col-8">{{ITEM.shopName}} -  R$ {{ITEM.totalPrice}}</div>
+        <div class="col-3">{{ITEM.creationDate | date: 'dd/MM/yyyy'}}</div>
+        <div class="col-5"><a [routerLink]="['/details',ITEM.id]"> {{ITEM.shopName}}</a></div>
+        <div class="col-2">{{ITEM.totalPrice | currency: 'R$'}}</div>
     </div>
 </div>
 

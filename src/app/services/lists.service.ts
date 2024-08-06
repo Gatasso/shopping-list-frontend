@@ -18,4 +18,8 @@ export class ListsService {
   public addNewList(list:List): Observable<List>{
     return this.http.post<List>(environment.urlAPI+"/lists",list)
   }
+
+  public getListById(idList: number): Observable<List>{
+    return this.http.get<List>(environment.urlAPI+"/lists/"+idList);
+  }
 }

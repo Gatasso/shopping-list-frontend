@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ListsService } from '../../services/lists.service';
 import { List } from '../../model/List';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-lists',
